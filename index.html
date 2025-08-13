@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandy Internet Café - Your Local Tech & Printing Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, white 70%);
+        }
+        .section-divider-dark {
+            height: 100px;
+            background: linear-gradient(to bottom, transparent, #111827 70%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .active-section {
+            color: #3b82f6 !important;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-900">Sandy Internet Café</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-500">Home</a>
+                    <a href="#printing" class="nav-link text-gray-700 hover:text-blue-500">Printing</a>
+                    <a href="#tech" class="nav-link text-gray-700 hover:text-blue-500">Tech Support</a>
+                    <a href="#value" class="nav-link text-gray-700 hover:text-blue-500">Value Services</a>
+                    <a href="#computers" class="nav-link text-gray-700 hover:text-blue-500">Computers</a>
+                    <a href="#web" class="nav-link text-gray-700 hover:text-blue-500">Web Design</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#printing" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Printing</a>
+                <a href="#tech" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Tech Support</a>
+                <a href="#value" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Value Services</a>
+                <a href="#computers" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Computers</a>
+                <a href="#web" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Web Design</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-20 md:pt-32 md:pb-28 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">Fast, Affordable, and Professional – Your Local Internet & Printing Partner</h1>
+                    <p class="text-xl text-gray-300 mb-8">From printing and photocopying to website design and tech support – we've got you covered.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#printing" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Explore Services</a>
+                        <a href="#contact" class="bg-transparent hover:bg-gray-800 text-white font-bold py-3 px-6 border border-white rounded-lg transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Internet café" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Printing & Document Services -->
+    <section id="printing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Printing & Document Services</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-print text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Black & White / Color Printing</h3>
+                    <p class="text-gray-600">High-quality printing for all your documents, photos, and projects at competitive prices.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-copy text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Photocopying & Scanning</h3>
+                    <p class="text-gray-600">Fast and accurate photocopying and scanning services for documents and photos.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-layer-group text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Laminating & Binding</h3>
+                    <p class="text-gray-600">Professional document finishing with various binding options and protective lamination.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-word text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Document Processing</h3>
+                    <p class="text-gray-600">Expert typing and formatting of CVs, exam papers, invoices, and other documents.</p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-passport text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">ID & Passport Photos</h3>
+                    <p class="text-gray-600">Professional ID and passport photos taken and printed on the spot to meet official requirements.</p>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-pdf text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">PDF Conversion</h3>
+                    <p class="text-gray-600">Convert documents between various formats including PDF, Word, Excel, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Assistance -->
+    <section id="tech" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Technical Assistance</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Computer Troubleshooting</h3>
+                    <p class="text-gray-600">Diagnose and fix hardware and software issues to get your computer running smoothly again.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-download text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Software Installation</h3>
+                    <p class="text-gray-600">Professional installation and configuration of operating systems and applications.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-chalkboard-teacher text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">IT Training</h3>
+                    <p class="text-gray-600">Personalized tutorials on computer basics, software use, and internet navigation.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Data Transfer & Backup</h3>
+                    <p class="text-gray-600">Secure transfer of files between devices and reliable backup solutions for your important data.</p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-shield-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Virus Removal</h3>
+                    <p class="text-gray-600">Thorough scanning and removal of viruses, malware, and spyware from infected systems.</p>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-network-wired text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Network Setup</h3>
+                    <p class="text-gray-600">Help with setting up home or small office networks, including Wi-Fi configuration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value-Added Services -->
+    <section id="value" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Value-Added Services</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-gray-100 rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-mobile-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Mobile Charging Stations</h3>
+                    <p class="text-gray-600">Charge your devices safely while you work or wait, with various charging cables available.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-gray-100 rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-signature text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Online Form Filling</h3>
+                    <p class="text-gray-600">Assistance with completing online applications, registrations, and government forms.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-gray-100 rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-ticket-alt text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Event Ticket Printing</h3>
+                    <p class="text-gray-600">Print your online event tickets with high-quality color printing for barcode scanning.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-gray-100 rounded-lg shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-phone text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Call & Fax Services</h3>
+                    <p class="text-gray-600">Make local and international calls or send/receive faxes at competitive rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second-Hand Computers for Sale -->
+    <section id="computers" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Quality Pre-Owned Computers</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Affordable, Tested, and Ready-to-Use</h3>
+                    <p class="text-gray-300 mb-6">We offer carefully selected, refurbished laptops and desktops that have been thoroughly tested to ensure reliable performance at a fraction of the cost of new machines.</p>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Full diagnostic testing before sale</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Clean installation of operating system</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>Basic software package included</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+                            <span>30-day limited warranty</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 inline-block">Inquire About Current Stock</a>
+                </div>
+                
+                <div class="flex justify-center">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Refurbished computers" class="rounded-lg shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Design & Multimedia Services -->
+    <section id="web" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Web Design & Multimedia Services</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-code text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Website Design</h3>
+                    <p class="text-gray-600">Custom website development tailored to your business needs, from simple landing pages to full e-commerce solutions.</p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-globe text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Domain & Hosting</h3>
+                    <p class="text-gray-600">Domain name registration and reliable web hosting services with 99.9% uptime guarantee.</p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-envelope text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Professional Email</h3>
+                    <p class="text-gray-600">Custom domain email setup with professional signatures and business card design.</p>
+                </div>
+                
+                <!-- Service Card 4 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-image text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Image Processing</h3>
+                    <p class="text-gray-600">Photo editing, retouching, background removal, and optimization for web or print.</p>
+                </div>
+                
+                <!-- Service Card 5 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Database Programming</h3>
+                    <p class="text-gray-600">Custom database solutions for inventory, customer management, and business processes.</p>
+                </div>
+                
+                <!-- Service Card 6 -->
+                <div class="service-card bg-gray-50 rounded-lg shadow-md p-6 transition duration-300 border border-gray-100">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-file-excel text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Excel Solutions</h3>
+                    <p class="text-gray-600">Custom spreadsheet design with formulas, macros, and data visualization for your business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us? -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Sandy Internet Café?</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-star text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">All-in-One Service</h3>
+                    <p class="text-gray-600">From printing to web design, we're your one-stop solution for all tech needs.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Expert Support</h3>
+                    <p class="text-gray-600">Our knowledgeable staff provides professional assistance for all services.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-tags text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Affordable Rates</h3>
+                    <p class="text-gray-600">Competitive pricing without compromising on quality or service.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Fast Turnaround</h3>
+                    <p class="text-gray-600">Quick service for urgent jobs with attention to detail and accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-blue-500 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Address</h4>
+                                <p>123 Tech Street, Digital City<br>Sandytown, ST 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-500 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-500 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <p>info@sandyinternetcafe.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-blue-500 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Operating Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 8:00 PM<br>
+                                Saturday: 9:00 AM - 6:00 PM<br>
+                                Sunday: 10:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 hover:bg-blue-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 hover:bg-blue-500 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 hover:bg-pink-700 w-10 h-10 rounded-full flex items-center justify-center">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-1">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block mb-1">Service Interested In</label>
+                            <select id="service" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Select a service</option>
+                                <option value="printing">Printing Services</option>
+                                <option value="tech">Technical Support</option>
+                                <option value="web">Web Design</option>
+                                <option value="computers">Pre-Owned Computers</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-6 text-center">Our Location</h3>
+                <div class="bg-gray-800 p-4 rounded-lg">
+                    <!-- Map placeholder - replace with actual map embed -->
+                    <div class="aspect-w-16 aspect-h-9">
+                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=123+Tech+Street,Digital+City,Sandytown&zoom=15&size=800x400&maptype=roadmap&markers=color:red%7C123+Tech+Street,Digital+City,Sandytown&key=YOUR_API_KEY" alt="Map location" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <p>&copy; 2023 Sandy Internet Café. All rights reserved.</p>
+                </div>
+                
+                <div class="flex justify-center md:justify-end space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // Highlight active navigation link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active-section');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active-section');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
